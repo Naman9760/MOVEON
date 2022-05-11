@@ -1,0 +1,51 @@
+﻿
+
+@{
+    ViewBag.Title = "Add Employee";
+}
+
+
+<div class="row">
+    <div class="col-6 offset-3">
+      <div class="card">
+          <div class="card-header">
+              <h3>ADD EMPLOYEE</h3>
+          </div>
+          <div class="card-body">
+              @using (Html.BeginForm("create", "Employess", FormMethod.Post))
+              {
+                  <div class="form-group">
+                      <label>Employe Name</label>
+                      <input type="text" class="from-controil" name="NAME" />
+                  </div>
+                  <div class="form-group">
+                      <label>Employe Gender</label>
+                      <select class="from-controil" name="GENDER">
+                          <option value="">select</option>
+                          <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                      <label>Employe Age</label>
+                      <input type="number" class="from-controil" name="AGE" />
+                  </div>
+                  <div class="form-group">
+                      <label>Employe Moblie</label>
+                      <input type="text" class="from-controil" name="MOBILE" />
+                  </div>
+                  <div class="form-group">
+                      <label>Employe Add</label>
+                      <input type="text" class="from-controil" name="Add" />
+                  </div>
+                  <div class="form-group">
+                      <input type="submit" value="Submit" class="btn btn-info" />
+                  </div>
+              }
+          </div>
+      </div>
+
+    </div>
+
+</div>
+

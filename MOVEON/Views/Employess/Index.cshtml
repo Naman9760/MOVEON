@@ -1,0 +1,29 @@
+﻿@model IEnumerable<MOVEON.Models.Employess>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@Html.ActionLink("Add Employe","create","Employess")
+<table class=" table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>GENDER</th>
+        <th>AGE</th>
+        <th>MOBILE</th>
+        <th>ADDRESS</th>
+        <th>ACTION</th>
+    </tr>
+    @foreach(var ptb in Model)
+            {
+<tr>
+    <td>@ptb.Id</td>
+    <td>@ptb.Name</td>
+    <td>@ptb.Gender</td>
+    <td>@ptb.Age</td>
+    <td>@ptb.Mobile</td>
+    <td>@ptb.Add</td>
+</tr>
+            }
+</table>
